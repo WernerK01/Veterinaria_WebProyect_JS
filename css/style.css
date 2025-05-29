@@ -72,21 +72,83 @@
 .btn-outline-success:hover {
     color: black;
     background-color: #31e2b4;
+    border-color: #31e2b4;
+}
+
+.btn-outline-success:active {
+    color: black !important;
+    background-color: #31e2b4 !important;
+    border-color: #31e2b4 !important
+}
+
+.btn-outline-danger {
+    border-color: #F02040;
+    color: #F02040;
+    font-weight: bold;
+}
+
+.btn-outline-danger:hover {
+    color: black;
+    background-color: #F02040;
+    border-color: #F02040;
+}
+
+.btn-outline-danger:active {
+    color: black !important;
+    background-color: #F02040 !important;
+    border-color: #F02040 !important;
+}
+
+.btn-outline-info {
+    border-color: #56F;
+    color: #56F;
+    font-weight: bold;
+}
+
+.btn-outline-info:hover {
+    border-color: #56F;
+    color: black;
+    background-color: #56F;
+}
+
+.btn-outline-info:active {
+    border-color: #56F !important;
+    color: black !important;
+    background-color: #56F !important;
 }
 
 .body {
     background-color: #0F0F1A
 }
 
+.font-1r {
+    font-size: 1rem;
+}
+
+.font-2r {
+    font-size: 2rem;
+}
+
+.font-3r {
+    font-size: 3rem;
+}
+
 .h1, .h2, .h3, .h4 {
     color: white;
-    font-size: clamp(1.5rem, 3vm, 3.5rem);
     font-family: "Sour Gummy", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: bold;
     font-variation-settings: 
         "wdth" 100;
+}
+
+.text {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
 }
 
 .supershadow-title {
@@ -110,4 +172,11 @@
     drop-shadow(-1px 1px 0px #53F)
     drop-shadow(0 0 0px #53F)
     drop-shadow(-1px 0 0px #53F);
+}
+
+
+.input-group-text {
+    background-color: #0F0F1A;
+    border-color: #A6F;
+    color: #95F;
 }

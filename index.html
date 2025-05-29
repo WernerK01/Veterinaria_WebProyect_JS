@@ -11,14 +11,16 @@
     <meta name="author" content="Werner Koll">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 
-    <!-- Boostrap & CSS -->
+    <!-- Boostrap, CSS & Toastify -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Fonts -->
-    <!-- Titles & Normal text -->
+    <!-- Fonts: Titles & Normal text -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -36,18 +38,21 @@
                     </a>
                 </div>
 
-                <div class="col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <div class="col-12 col-md-auto mb-2 justify-content-center align-items-center mb-md-0">
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item lv1-nav">
-                            <a class="nav-link" href="index.html">Inicio</a>
+                            <a class="nav-link" href="index.html"> 
+                                <i class="bi bi-house-door-fill"></i> Inicio</a>
                         </li>
                         <li class="nav-item lv1-nav">
-                            <a class="nav-link" href="html/app.html">App</a>
+                            <a class="nav-link" href="html/app.html">
+                                <i class="bi bi-app-indicator"></i> Aplicación</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-3 text-end">
-                    <form class="d-flex form" role="search">
+                    <button class="btn btn-outline-success" id="BtnSearch"><i class="bi bi-search"></i></button>
+                    <form class="d-flex form visually-hidden" role="search">
                         <input class="form-control me-2" type="search" placeholder="Busqueda..." aria-label="Search" />
                         <button class="btn btn-outline-success" type="submit">Buscar</button>
                     </form>
@@ -57,14 +62,21 @@
     </header>
 
 
-    <main class="d-flex justify-content-center">
-        <h1 class="h1 supershadow-title">Veterinaria</h1>
+    <main class="text-center">
+        <h1 class="h1 font-3r supershadow-title">Veterinaria</h1>
+        <div>
+            <p class="text supershadow-text">En este programa podremos tener un registro de cada una de las mascotas que se están atentidas o que se atendieron a lo largo del tipo.</p>
+            <p class="text supershadow-text">Se nos pidio también que se pueda ver todo  ese registro para poder re ingresarlo si es necesario porque fue de vuelta.</p>
+            <p class="text supershadow-text">Dentro del mismo archivo script está todo comentado cada línea de forma detallada para un major entendimiento.</p>
+            <p class="text supershadow-text">Puedes ir a la aplicación dandole click en el enlace en el navbar.</p>
+        </div>
     </main>
 
-
+    <!-- Boostrap & Toastify Javascript's -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>
