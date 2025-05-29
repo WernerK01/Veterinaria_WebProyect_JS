@@ -1,6 +1,6 @@
 import { BtnSearchToggler } from './functions/searchBtn.js';
 import { LocalStorageAdd, LocalStorageClear } from './functions/localStorege.js';
-import { MessageSucces, MessageError } from './functions/messges.js'
+import { MessageSucces, MessageError, MessageWarning } from './functions/messges.js'
  
 const btnSearchToggle = document.querySelector('#btnSearchToggle');
 const btnSearch = document.querySelector('#btnSearch');
@@ -43,6 +43,7 @@ btnGlobalClearPet.addEventListener('click', () => {
     try {
         LocalStorageClear('Pets', pets);
     } catch(err) {
-        console.error(`[ERROR]: Se generó un error en 'btnGlobalClearPet-Event-Click': ${err.message}\n${err}`)
+        console.error(`[ERROR]: Se generó un error en 'btnGlobalClearPet-Event-Click': ${err.message}\n${err}`);
+        MessageError(`${err.message}`);
     }
 });
