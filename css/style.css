@@ -1,0 +1,113 @@
+* {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    scrollbar-width: thin;
+    scrollbar-color: #50D;
+}
+
+.navbar {
+    background-image: linear-gradient(#002f, #0000);
+    font-weight: bold;
+}
+
+.lv1-nav { 
+    display: inline-flex;
+    position: relative;
+    color: #ffffff;
+}
+
+.lv1-nav:hover:after {
+    content: " ";
+    position: absolute;
+    border-bottom: solid 2px #ffffff;
+    width:  100%;
+    height: 10px;
+    bottom: 1px;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: white;
+}
+.navbar-toggler {
+    border-color: #A6F;
+}
+
+.navbar-toggler:hover {
+    box-shadow: 0 0 0 .25rem rgba(171, 102, 255, 0.11);
+}
+
+.navbar-icon {
+    color: #95F;
+}
+
+.form {
+    font-weight: bold;
+}
+
+.form-control {
+    background-color: #0F0F1A;
+    border-color: #A6F;
+    color: #A6F;
+}
+
+.form-control:focus {
+    background-color: #0F0F1A;
+    color: white;
+    border-color: #A6F;
+    box-shadow: 0 0 0 .25rem rgba(171, 102, 255, 0.11);
+}
+
+.btn-outline-success {
+    border-color: #31e2b4;
+    color: #31e2b4;
+    font-weight: bold;
+}
+
+.btn-outline-success:hover {
+    color: black;
+    background-color: #31e2b4;
+}
+
+.body {
+    background-color: #0F0F1A
+}
+
+.h1, .h2, .h3, .h4 {
+    color: white;
+    font-size: clamp(1.5rem, 3vm, 3.5rem);
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bold;
+    font-variation-settings: 
+        "wdth" 100;
+}
+
+.supershadow-title {
+  text-shadow: 0 -2px 0 #50D, 0 2px 0 #50D,
+    2px 0 0 #50D, -2px 0 0 #50D,
+    -4px 2px 0 #50D, -2px 4px 0 #50D;
+  filter: drop-shadow(0 0 1px #53F)
+    drop-shadow(-1px 1px 0px #53F)
+    drop-shadow(0 0 0px #53F)
+    drop-shadow(-1px 0 0px #53F)
+    drop-shadow(-1px 0 0px #53F)
+    drop-shadow(-1px 0 0px #53F)
+    drop-shadow(-1px 0 0px #53F);
+}
+
+.supershadow-text {
+  text-shadow: 0 -1px 0 #50D, 0 1px 0 #50D,
+    1px 0 0 #50D, -1px 0 0 #50D,
+    -2px 1px 0 #50D, -1px 2px 0 #50D;
+  filter: drop-shadow(0 0 1px #53F)
+    drop-shadow(-1px 1px 0px #53F)
+    drop-shadow(0 0 0px #53F)
+    drop-shadow(-1px 0 0px #53F);
+}
