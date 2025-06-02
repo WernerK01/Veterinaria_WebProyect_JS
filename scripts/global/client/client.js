@@ -1,4 +1,6 @@
-let clients = []
+import { GetLocalStorege } from "../functions/localStorege.js";
+
+let clients = GetLocalStorege('clients');
 
 export function AddClient(name, lastName, phoneNumer, mail) {
     let id;
