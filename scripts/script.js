@@ -5,6 +5,7 @@ import { AddClient, GetClients } from './global/client/client.js';
 
 import { LocalStorageAdd } from './global/functions/localStorege.js';
 import { MessageSucces, MessageError, MessageWarning } from './global/functions/messges.js';
+import { ClearUIClients, ClearUIPets } from './global/functions/clearUI.js';
 import { IntValidation } from './global/functions/validations.js';
 
 const btnClientAdd = document.querySelector('#btnClientAdd');
@@ -35,4 +36,6 @@ btnClientAdd.addEventListener('click', () => {
         console.error(`[ERROR]: Se generó un error en 'btnGlobalClearClient-Event-Click': ${err.message}\n${err}`)
         MessageError(`Ocurrió un error: ${err.message}`);
     }
+
+    ClearUIClients();
 });
