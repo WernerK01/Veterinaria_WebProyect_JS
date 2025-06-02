@@ -198,3 +198,16 @@
     border-color: #A6F;
     color: #95F;
 }
+
+.modal-content {
+    background-color: #0F0F1A;
+    border-color: #1d1721;
+}
+
+.modal-header {
+    border-color: #0F0F1A;
+}
+
+.modal-footer {
+    border-color: #0F0F1A;
+}
