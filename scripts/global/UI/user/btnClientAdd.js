@@ -6,7 +6,6 @@ import { ClearUIClients } from '../../dom/clearUI.js';
 import { IntValidation } from '../../functions/validations.js';
 
 const btnClientAdd = document.querySelector('#btnClientAdd');
-const btnClientRemove = document.querySelector('#btnClientRemove');
 
 btnClientAdd.addEventListener('click', async () => {
     let name = document.querySelector('#inputClientName').value;
