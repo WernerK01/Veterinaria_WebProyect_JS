@@ -1,7 +1,6 @@
-import { LocalStorageClear } from '../functions/localStorege.js';
-import { MessageSucces, MessageError } from '../functions/messges.js';
-import { GetClients } from '../client/client.js';
-import { Valid, Deny, Succes } from '../functions/alerts.js';
+import { LocalStorageClear } from '../../functions/localStorege.js';
+import { GetClients } from '../../functions/client/client.js';
+import { Valid, Deny, Succes } from '../../functions/alerts.js';
 
 const btnGlobalClearClient = document.querySelector('#btnGlobalClearClient');
 const btnGlobalClearPet = document.querySelector('#btnGlobalClearPet');

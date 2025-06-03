@@ -1,6 +1,10 @@
-import { GetLocalStorege } from "../functions/localStorege.js";
+import { GetLocalStorege, LocalStorageAdd } from "../localStorege.js";
 
 let clients = GetLocalStorege('clients');
+
+export function GetClients() {
+    return clients;
+}
 
 export function AddClient(name, lastName, phoneNumer, mail) {
     let id;
@@ -17,6 +21,7 @@ export function AddClient(name, lastName, phoneNumer, mail) {
     });
 }
 
-export function GetClients() {
-    return clients;
+export function RemoveCLient(client) {
+    clients.splice(clients.indexOf(client), 1);
+    LocalStorageAdd('clients', clients);
 }
