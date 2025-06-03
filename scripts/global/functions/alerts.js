@@ -1,8 +1,8 @@
 const swalBoostrapSucces = Swal.mixin({
     customClass: {
-        confirmButton: 'btn btn-outline-success',
-        cancelButton: 'btn btn-outline-danger',
-        closeButton: 'btn btn-outline-danger',
+        confirmButton: 'btn btn-outline-success m-1',
+        cancelButton: 'btn btn-outline-danger m-1',
+        closeButton: 'btn btn-outline-danger m-1'
     },
     buttonsStyling: false,
     theme: 'dark',
