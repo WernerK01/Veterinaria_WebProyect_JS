@@ -57,7 +57,7 @@
 }
 
 .form-control:focus {
-    background-color: #0F0F1A;
+    background-color: #0f0f1a;
     color: white;
     border-color: #A6F;
     box-shadow: 0 0 0 .25rem rgba(171, 102, 255, 0.11);
@@ -137,6 +137,10 @@
 
 .body {
     background-color: #0F0F1A
+}
+
+.font-bold {
+    font-weight: bold;
 }
 
 .font-1r {

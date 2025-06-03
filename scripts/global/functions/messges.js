@@ -10,7 +10,8 @@ export function MessageSucces(args) {
             background: '#0F0F1A',
             color: "#31e2b4",
             borderColor: '#31e2b4',
-            borderRadius: "5px"
+            borderRadius: "5px",
+            fontWeight: "bold"
         }
     }).showToast();
 }
@@ -27,7 +28,8 @@ export function MessageError(args) {
             background: ' #0F0F1A',
             color: "#F02040",
             borderColor: '#F02040',
-            borderRadius: "5px"
+            borderRadius: "5px",
+            fontWeight: "bold"
         }
     }).showToast();
 }
@@ -44,7 +46,8 @@ export function MessageWarning(args) {
             background: ' #0F0F1A',
             color: '#FC2',
             borderColor: '#FC2',
-            borderRadius: "5px"
+            borderRadius: "5px",
+            fontWeight: "bold"
         }
     }).showToast();
 }

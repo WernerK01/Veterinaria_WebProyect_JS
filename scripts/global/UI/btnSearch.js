@@ -1,5 +1,5 @@
-import { BtnSearchToggler } from './functions/searchBtn.js';
-import { MessageError } from './functions/messges.js';
+import { BtnSearchToggler } from '../functions/searchBtn.js';
+import { MessageError } from '../functions/messges.js';
 
 const btnSearchToggle = document.querySelector('#btnSearchToggle');
 const btnSearch = document.querySelector('#btnSearch');
