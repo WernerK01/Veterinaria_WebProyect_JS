@@ -1,10 +1,15 @@
-import { GetLocalStorege, LocalStorageAdd } from "../localStorege.js";
+import { GetLocalStorege, LocalStorageAdd, LocalStorageClear } from "../localStorege.js";
 
 let clients = GetLocalStorege('clients');
 let selectedClient;
 
 export function GetClients() {
     return clients;
+}
+
+export function ClearClients() {
+    clients = [];
+    LocalStorageClear('clients', clients);
 }
 
 export function AddClient(name, lastName, phoneNumer, mail) {

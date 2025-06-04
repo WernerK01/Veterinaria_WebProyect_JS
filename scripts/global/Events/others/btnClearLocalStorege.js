@@ -1,7 +1,8 @@
 import { LocalStorageClear } from '../../functions/localStorege.js';
-import { GetClients } from '../../functions/client/functionsClient.js';
+import { GetClients, ClearClients } from '../../functions/client/functionsClient.js';
 import { Valid, Deny, Succes } from '../../functions/alerts.js';
 import { CreateClientsCards } from '../../functions/dom/Cards/createClientCard.js';
+import { ClearUpdateButtonClientUI } from '../../functions/dom/buttons.js';
 
 const btnGlobalClearClient = document.querySelector('#btnGlobalClearClient');
 const btnGlobalClearPet = document.querySelector('#btnGlobalClearPet');
@@ -11,12 +12,16 @@ btnGlobalClearClient.addEventListener('click', async () => {
         const confirm = await Valid('Confirmación', '¿Estás seguro de querer eliminar el LocalStorage de los clientes?');
         if(!confirm) {
             Deny('Cancelación', 'Se cancelo la operación con éxito.');
+            ClearUpdateButtonClientUI();
             return;
         }
 
+        ClearClients();
+
         const clients = GetClients();
-        LocalStorageClear('clients', clients);
-        CreateClientsCards(clients)
+        CreateClientsCards(clients);
+        ClearUpdateButtonClientUI();
+
 
         Succes('Éxito', 'Se Limpió el LocalStorage de los clientes.');
     } catch(err) {
