@@ -1,6 +1,7 @@
 import { GetLocalStorege, LocalStorageAdd } from "../localStorege.js";
 
 let clients = GetLocalStorege('clients');
+let selectedClient;
 
 export function GetClients() {
     return clients;
@@ -21,7 +22,26 @@ export function AddClient(name, lastName, phoneNumer, mail) {
     });
 }
 
-export function RemoveCLient(client) {
+export function RemoveClient(client) {
     clients.splice(clients.indexOf(client), 1);
     LocalStorageAdd('clients', clients);
+}
+
+export function UpdateClient(name, lastName, phoneNumer, mail) {
+    let oldClient = GetClient(selectedClient.id);
+
+    oldClient.name = name;
+    oldClient.lastName = lastName;
+    oldClient.phoneNumer = phoneNumer;
+    oldClient.mail = mail;
+}
+
+export function GetClient(id) {
+    let client = clients.find(x => x.id === id);
+    return client;
+}
+
+export function GetSetSelectedClient(selection) {
+    if(selection !== undefined) selectedClient = selection;
+    else return selectedClient;
 }

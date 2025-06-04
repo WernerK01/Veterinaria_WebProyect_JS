@@ -139,6 +139,18 @@
     background-color: #0F0F1A
 }
 
+.card {
+    background-color: #0F0F1A;
+    border-color: #95F;
+}
+.card-title {
+    color: #95F;
+}
+.list-group-item {
+    background-color: #0F0F1A;
+    border-color: #95F;
+}
+
 .font-bold {
     font-weight: bold;
 }

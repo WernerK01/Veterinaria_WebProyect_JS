@@ -1,8 +1,8 @@
-import { RemoveCLient, GetClients } from '../../functions/client/client.js';
+import { RemoveClient, GetClients } from '../../functions/client/functionsClient.js';
 import { LocalStorageAdd } from '../../functions/localStorege.js';
 import { MessageError, MessageWarning } from '../../functions/messges.js';
 import { Succes, Deny, Valid } from '../../functions/alerts.js';
-import { ClearUIClients } from '../../dom/clearUI.js';
+import { ClearUIClients } from '../../functions/dom/inputs.js';
 import { IntValidation } from '../../functions/validations.js';
 
 const btnClientRemove = document.querySelector('#btnClientRemove');

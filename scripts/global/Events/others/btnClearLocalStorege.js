@@ -1,6 +1,7 @@
 import { LocalStorageClear } from '../../functions/localStorege.js';
-import { GetClients } from '../../functions/client/client.js';
+import { GetClients } from '../../functions/client/functionsClient.js';
 import { Valid, Deny, Succes } from '../../functions/alerts.js';
+import { CreateClientsCards } from '../../functions/dom/Cards/createClientCard.js';
 
 const btnGlobalClearClient = document.querySelector('#btnGlobalClearClient');
 const btnGlobalClearPet = document.querySelector('#btnGlobalClearPet');
@@ -13,7 +14,10 @@ btnGlobalClearClient.addEventListener('click', async () => {
             return;
         }
 
-        LocalStorageClear('clients', GetClients());
+        const clients = GetClients();
+        LocalStorageClear('clients', clients);
+        CreateClientsCards(clients)
+
         Succes('Éxito', 'Se Limpió el LocalStorage de los clientes.');
     } catch(err) {
         console.error(`[ERROR]: Se generó un error en 'btnGlobalClearClient-Event-Click': ${err.message}\n${err}`)

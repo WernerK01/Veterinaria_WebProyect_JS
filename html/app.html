@@ -102,18 +102,22 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6 col-sm-12 mb-2">
+                    <div class="col-lg-6 col-sm-12 mb-2" id="btnClientAddCol">
                         <button class="btn btn-outline-success" id="btnClientAdd" type="submit">
                             <i class="bi bi-person-fill-add"></i> Agregar</button>
                     </div>
-                    <div class="col-lg-6 col-sm-12 mb-2">
+                    <div class="col-lg-6 col-sm-12 mb-2 visually-hidden" id="btnClientUpdateCol">
+                        <button class="btn btn-outline-warning" id="btnClientUpdate" type="submit">
+                            <i class="bi bi-person-fill-gear"></i> Actualizar</button>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 mb-2" id="btnClientRemoveCol">
                         <button class="btn btn-outline-danger" id="btnClientRemove" type="submit">
                             <i class="bi bi-person-fill-dash"></i> Eliminar</button>
                     </div>
                 </div>
             </section>
 
-            <section id="clientContainer"></section>
+            <section id="clientContainer" class="d-flex flex-wrap justify-content-center align-items-center"></section>
 
             <h3 class="h3 font-2r mt-5 supershadow-title">Información de la Mascota</h3>
             <section class="container-fluid d-flex justify-content-center align-items-center">
