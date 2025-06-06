@@ -1,4 +1,4 @@
-import { UpdateClient, GetClients } from "../../functions/client/functionsClient.js";
+import { UpdateClient, GetClients, GetSetSelectedClient } from "../../functions/client/functionsClient.js";
 import { LocalStorageAdd } from "../../functions/localStorege.js";
 import { CreateClientsCards } from "../../functions/dom/Cards/createClientCard.js";
 import { ClearUpdateButtonClientUI } from "../../functions/dom/buttons.js";
@@ -10,6 +10,8 @@ btnClientUpdate.addEventListener('click', async () => {
     let lastName = document.querySelector('#inputClientLastName').value;
     let phoneNumer = document.querySelector('#inputClientPhoneNumer').value;
     let mail = document.querySelector('#inputClientMail').value;
+
+    const oldClient = GetSetSelectedClient();
 
     if(name === '' || lastName === '' || phoneNumer === '' || mail === '') {
         MessageWarning('Debes rellenar los campos primero.');
@@ -23,11 +25,15 @@ btnClientUpdate.addEventListener('click', async () => {
 
     try {
         const confirm = await Valid('<h2 class="font-bold">Confirmación</h2>', `<p class="font-text-1">¿Estás seguro de querer modificar al cliente?</p>
-            <p>Datos Nuevos:<br>
-                    <span class="font-bold">Nombre Completo:</span> ${name} ${lastName}<br>
-                    <span class="font-bold">Número de telefono:</span> ${phoneNumer}<br>
-                    <span class="font-bold">Correo electrónico:</span> ${mail}
-                </p>`);
+            <p><span class="font-bold important">Datos Antiguos:</span><br>
+                <span class="font-bold">Nombre Completo:</span> ${oldClient.name} ${oldClient.lastName}<br>
+                <span class="font-bold">Número de telefono:</span> ${oldClient.phoneNumer}<br>
+                <span class="font-bold">Correo electrónico:</span> ${oldClient.mail}</p>
+
+            <p><span class="font-bold important">Datos Nuevos:</span><br>
+                <span class="font-bold">Nombre Completo:</span> ${name} ${lastName}<br>
+                <span class="font-bold">Número de telefono:</span> ${phoneNumer}<br>
+                <span class="font-bold">Correo electrónico:</span> ${mail}</p>`);
         if(!confirm) {
             await Deny('Cancelación', 'Se cancelo la operación con éxito.');
             ClearUpdateButtonClientUI();
@@ -48,6 +54,5 @@ btnClientUpdate.addEventListener('click', async () => {
     }
 
     ClearUpdateButtonClientUI();
-
     location.reload();
 });

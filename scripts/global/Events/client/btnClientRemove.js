@@ -13,7 +13,7 @@ btnClientRemove.forEach((button) => {
             const clientFound = GetClient(dataClientID);
 
             const confirm = await Valid('<h2 class="font-bold">Confirmación</h2>', 
-                `<p class="font-text-1">Estás seguro de querer eliminar al cliente <span class="font-bold">${clientFound.name} ${clientFound.lastName}</span>?</p>`);
+                `<p class="font-text-1">Estás seguro de querer eliminar al cliente <span class="font-bold important">${clientFound.name} ${clientFound.lastName}</span>?</p>`);
             if(!confirm) {
                 await Deny('Cancelación', 'Se cancelo la operación con éxito.');
                 ClearUpdateButtonClientUI();

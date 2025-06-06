@@ -26,7 +26,7 @@ btnClientAdd.addEventListener('click', async () => {
 
     try {
         const confirm = await Valid('<h2 class="font-bold">Confirmación</h2>', `<p class="font-text-1">¿Estás seguro de querer agregar un nuevo cliente?</p>
-            <p>Datos:<br>
+            <p><span class="font-bold important">Datos:</span><br>
                     <span class="font-bold">Nombre Completo:</span> ${name} ${lastName}<br>
                     <span class="font-bold">Número de telefono:</span> ${phoneNumer}<br>
                     <span class="font-bold">Correo electrónico:</span> ${mail}
@@ -50,6 +50,5 @@ btnClientAdd.addEventListener('click', async () => {
     }
 
     ClearUpdateButtonClientUI();
-
     location.reload();
 });
