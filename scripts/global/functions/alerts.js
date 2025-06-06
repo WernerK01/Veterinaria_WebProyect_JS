@@ -10,23 +10,21 @@ const swalBoostrapSucces = Swal.mixin({
     position: 'center',
 });
 
-export function Succes(title, args) {
-    swalBoostrapSucces.fire({
+export async function Succes(title, args) {
+    await swalBoostrapSucces.fire({
         title: title,
-        text: args,
+        html: args,
         icon: 'success',
         iconColor: '#31e2b4',
-        timer: 1500,
     });
 }
 
-export function Deny(title, args) {
-    swalBoostrapSucces.fire({
+export async function Deny(title, args) {
+    await swalBoostrapSucces.fire({
         title: title,
-        text: args,
+        html: args,
         icon: 'error',
         iconColor: '#F02040',
-        timer: 1500
     });
 }
 
@@ -35,7 +33,7 @@ export async function Valid(title, args) {
 
     await swalBoostrapSucces.fire({
         title: title,
-        text: args,
+        html: args,
         icon: 'warning',
         iconColor: '#FC2',
         confirmButtonText: 'Confirmar',

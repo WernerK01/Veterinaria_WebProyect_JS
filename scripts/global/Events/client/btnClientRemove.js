@@ -11,7 +11,7 @@ btnClientRemove.forEach((button) => {
         try {
             const confirm = await Valid('Confirmación', '¿Estás seguro de querer eliminar al cliente?');
             if(!confirm) {
-                Deny('Cancelación', 'Se cancelo la operación con éxito.');
+                await Deny('Cancelación', 'Se cancelo la operación con éxito.');
                 ClearUpdateButtonClientUI();
                 return;
             }
@@ -20,7 +20,7 @@ btnClientRemove.forEach((button) => {
             const clientFound = GetClient(dataClientID);
             
             if (clientFound == undefined) { 
-                Deny('Error', 'No se pudo encontrar al usuario.'); 
+                await Deny('Error', 'No se pudo encontrar al usuario.'); 
                 return; 
             }
 
@@ -30,17 +30,15 @@ btnClientRemove.forEach((button) => {
             LocalStorageAdd('clients', clients);
             CreateClientsCards(clients);
 
-            Succes('Éxito', 'El usuario fue eliminado con éxito.');
+            await Succes('Éxito', 'El usuario fue eliminado con éxito.');
 
         } catch(err) {
             console.error(`[ERROR]: Se generó un error en 'btnGlobalClearClient-Event-Click': ${err.message}\n${err}`)
-            Deny('Error', `Ocurrió un error: ${err.message}`);
+            await Deny('Error', `Ocurrió un error: ${err.message}`);
         }
         
         ClearUpdateButtonClientUI();
 
-        setTimeout(() => {
-            location.reload();
-        }, 2000);
+        location.reload();
     });
 })

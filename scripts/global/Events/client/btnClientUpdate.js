@@ -22,9 +22,14 @@ btnClientUpdate.addEventListener('click', async () => {
     }
 
     try {
-        const confirm = await Valid('Confirmación', '¿Estás seguro de querer modificar al cliente?');
+        const confirm = await Valid('<h2 class="font-bold">Confirmación</h2>', `<p class="font-text-1">¿Estás seguro de querer modificar al cliente?</p>
+            <p>Datos Nuevos:<br>
+                    <span class="font-bold">Nombre Completo:</span> ${name} ${lastName}<br>
+                    <span class="font-bold">Número de telefono:</span> ${phoneNumer}<br>
+                    <span class="font-bold">Correo electrónico:</span> ${mail}
+                </p>`);
         if(!confirm) {
-            Deny('Cancelación', 'Se cancelo la operación con éxito.');
+            await Deny('Cancelación', 'Se cancelo la operación con éxito.');
             ClearUpdateButtonClientUI();
             return;
         }
@@ -35,16 +40,14 @@ btnClientUpdate.addEventListener('click', async () => {
         LocalStorageAdd('clients', clients);
         CreateClientsCards(clients);
 
-        Succes('Éxito', 'Se modifico al usuario correctamente.');
+        await Succes('Éxito', 'Se modifico al usuario correctamente.');
 
     } catch(err) {
         console.error(`[ERROR]: Se generó un error en 'btnGlobalClearClient-Event-Click': ${err.message}\n${err}`)
-        Deny('Error', `Ocurrió un error: ${err.message}`);
+        await Deny('Error', `Ocurrió un error: ${err.message}`);
     }
 
     ClearUpdateButtonClientUI();
 
-    setTimeout(() => {
-        location.reload();
-    }, 2000);
+    location.reload();
 });
