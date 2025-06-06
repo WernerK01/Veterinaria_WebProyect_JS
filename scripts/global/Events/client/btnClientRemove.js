@@ -9,15 +9,16 @@ const btnClientRemove = document.querySelectorAll('#btnClientRemove');
 btnClientRemove.forEach((button) => {
     button.addEventListener('click', async () => {
         try {
-            const confirm = await Valid('Confirmación', '¿Estás seguro de querer eliminar al cliente?');
+            const dataClientID = parseInt(button.getAttribute('data-client-id'));
+            const clientFound = GetClient(dataClientID);
+
+            const confirm = await Valid('<h2 class="font-bold">Confirmación</h2>', 
+                `<p class="font-text-1">Estás seguro de querer eliminar al cliente <span class="font-bold">${clientFound.name} ${clientFound.lastName}</span>?</p>`);
             if(!confirm) {
                 await Deny('Cancelación', 'Se cancelo la operación con éxito.');
                 ClearUpdateButtonClientUI();
                 return;
             }
-
-            const dataClientID = parseInt(button.getAttribute('data-client-id'));
-            const clientFound = GetClient(dataClientID);
             
             if (clientFound == undefined) { 
                 await Deny('Error', 'No se pudo encontrar al usuario.'); 
