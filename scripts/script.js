@@ -6,3 +6,5 @@ import './global/Events/client/btnClientUpdate.js';
 import './global/Events/client/AddAllClientsCard.js';
 import './global/Events/client/btnClientRemove.js';
 import './global/Events/client/btnClientSelection.js';
+
+import './global/Events/others/randomFacts.js';

@@ -34,7 +34,7 @@ btnClientRemove.forEach((button) => {
             await Succes('Éxito', 'El usuario fue eliminado con éxito.');
 
         } catch(err) {
-            console.error(`[ERROR]: Se generó un error en 'btnGlobalClearClient-Event-Click': ${err.message}\n${err}`)
+            console.error(`[ERROR]: Se generó un error en 'btnClientRemove-Event-Click': ${err.message}\n${err}`)
             await Deny('Error', `Ocurrió un error: ${err.message}`);
         }
         

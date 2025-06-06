@@ -45,7 +45,7 @@ btnClientAdd.addEventListener('click', async () => {
 
         await Succes('Éxito', 'Se agrego al cliente nuevo.');
     } catch(err) {
-        console.error(`[ERROR]: Se generó un error en 'btnGlobalClearClient-Event-Click': ${err.message}\n${err}`)
+        console.error(`[ERROR]: Se generó un error en 'btnClientAdd-Event-Click': ${err.message}\n${err}`)
         Deny('Error', `Ocurrió un error: ${err.message}`);
     }
 

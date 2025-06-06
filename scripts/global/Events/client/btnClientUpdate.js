@@ -49,7 +49,7 @@ btnClientUpdate.addEventListener('click', async () => {
         await Succes('Éxito', 'Se modifico al usuario correctamente.');
 
     } catch(err) {
-        console.error(`[ERROR]: Se generó un error en 'btnGlobalClearClient-Event-Click': ${err.message}\n${err}`)
+        console.error(`[ERROR]: Se generó un error en 'btnClientUpdate-Event-Click': ${err.message}\n${err}`)
         await Deny('Error', `Ocurrió un error: ${err.message}`);
     }
 

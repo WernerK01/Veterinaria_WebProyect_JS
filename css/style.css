@@ -165,9 +165,14 @@
     border-color: #95F;
 }
 
+.spinner {
+    color: #53F;
+}
+
 .font-bold {
     font-weight: bold;
 }
+
 .important {
     color: #D05;
 }
@@ -201,7 +206,6 @@
 .text {
     color: white;
     font-size: 1.2rem;
-    font-weight: bold;
     margin: 0;
     padding: 0;
 }

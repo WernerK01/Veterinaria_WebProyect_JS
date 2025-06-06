@@ -15,7 +15,7 @@ AllBtnClientSelect.forEach((button) => {
             GetSetSelectedClient(clientFound);
             UpdateButtonClientUI(clientFound);
         } catch(err) {
-            console.error(`[ERROR]: Se generó un error en 'btnGlobalClearClient-Event-Click': ${err.message}\n${err}`)
+            console.error(`[ERROR]: Se generó un error en 'btnClientSelection-Event-Click': ${err.message}\n${err}`)
             MessageError(`Ocurrió un error: ${err.message}`);
         }
     });
