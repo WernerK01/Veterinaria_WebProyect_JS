@@ -134,14 +134,28 @@
     color: black !important;
     background-color: #FC2 !important;
 }
+.form-select {
+    background-color: #0F0F1A;
+    border-color: #A6F;
+    color: #A6F;
+}
+.form-select:focus {
+    background-color: #0f0f1a;
+    color: white;
+    border-color: #A6F;
+    box-shadow: 0 0 0 .25rem rgba(171, 102, 255, 0.11);
+}
 
 .body {
-    background-color: #0F0F1A
+    background-color: #0F0F1A;
 }
 
 .card {
     background-color: #0F0F1A;
     border-color: #95F;
+}
+.card-body:nth-child(2) {
+    border-top: #95F solid 1px;
 }
 .card-title {
     color: #95F;

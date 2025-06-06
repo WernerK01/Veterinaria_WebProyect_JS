@@ -102,17 +102,13 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6 col-sm-12 mb-2" id="btnClientAddCol">
+                    <div class="col-lg-12 col-sm-12 mb-2" id="btnClientAddCol">
                         <button class="btn btn-outline-success" id="btnClientAdd" type="submit">
-                            <i class="bi bi-person-fill-add"></i> Agregar</button>
+                            <i class="bi bi-plus-lg"></i> Agregar</button>
                     </div>
                     <div class="col-lg-6 col-sm-12 mb-2 visually-hidden" id="btnClientUpdateCol">
                         <button class="btn btn-outline-warning" id="btnClientUpdate" type="submit">
                             <i class="bi bi-person-fill-gear"></i> Actualizar</button>
-                    </div>
-                    <div class="col-lg-6 col-sm-12 mb-2" id="btnClientRemoveCol">
-                        <button class="btn btn-outline-danger" id="btnClientRemove" type="submit">
-                            <i class="bi bi-person-fill-dash"></i> Eliminar</button>
                     </div>
                 </div>
             </section>
@@ -136,8 +132,11 @@
                     </div>
                     <div class="col-lg-4 col-sm-12 mb-3">
                         <div class="input-group">
-                            <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-hearts"></i></span>
-                            <input type="text" class="form-control" id="inputPetRace" placeholder="Raza" aria-describedby="basic-addon1">
+                            <label class="input-group-text" for="inputPetRace"><i class="bi bi-person-hearts"></i></label>
+                            <select class="form-select" id="inputPetRace">
+                                <option value="1" selected>Perro</option>
+                                <option value="2">Gato</option>
+                            </select>
                         </div>
                     </div>
                     <div class="col-lg-12 col-sm-12 mb-3">

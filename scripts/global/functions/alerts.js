@@ -16,6 +16,7 @@ export function Succes(title, args) {
         text: args,
         icon: 'success',
         iconColor: '#31e2b4',
+        timer: 1500,
     });
 }
 
@@ -25,6 +26,7 @@ export function Deny(title, args) {
         text: args,
         icon: 'error',
         iconColor: '#F02040',
+        timer: 1500
     });
 }
 

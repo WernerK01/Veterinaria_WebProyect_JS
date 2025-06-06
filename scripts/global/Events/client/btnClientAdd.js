@@ -45,4 +45,8 @@ btnClientAdd.addEventListener('click', async () => {
     }
 
     ClearUpdateButtonClientUI();
+
+    setTimeout(() => {
+        location.reload();
+    }, 2000);
 });
