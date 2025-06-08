@@ -9,8 +9,8 @@ export function CreatePetsCard(pets) {
         card.style.width = "18rem";
 
         card.innerHTML = `
+            <div class="card-header">${pet.name}</div>
             <div class="card-body">
-                <h5 class="card-title font-bold">${pet.name}</h5>
                 <p class="card-text">
                     ${pet.description}<br>
                     <span class="font-bold">Edad:</span> ${pet.age}<br>

@@ -154,12 +154,19 @@
     background-color: #0F0F1A;
     border-color: #95F;
 }
+.card-header {
+    background-color: #0F0F1A;
+    font-weight: bold;
+    color: #95F;
+    font-size: larger;
+}
 .card-body:nth-child(2) {
     border-top: #95F solid 1px;
 }
-.card-title {
-    color: #95F;
+.card-body:nth-child(3) {
+    border-top: #95F solid 1px;
 }
+
 .list-group-item {
     background-color: #0F0F1A;
     border-color: #95F;
@@ -201,6 +208,10 @@
     font-weight: bold;
     font-variation-settings: 
         "wdth" 100;
+}
+
+.colorWhite {
+    color: white;
 }
 
 .text {

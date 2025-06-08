@@ -9,8 +9,8 @@ export function CreateClientsCards(clients) {
         card.style.width = "18rem";
 
         card.innerHTML = `
+            <div class="card-header">${client.name} ${client.lastName}</div>
             <div class="card-body">
-                <h5 class="card-title font-bold">${client.name} ${client.lastName}</h5>
                 <p class="card-text">
                     <span class="font-bold">ID del Cliente:</span> ${client.id}<br>
                     <span class="font-bold">Correo electrónico:</span> ${client.mail}<br>

@@ -17,7 +17,7 @@ try {
     AddText('dogsRandomFacts', factDogs.data[0].attributes.body);
 
     ToggleSnipper(false);
-    facts.className = "";
+    facts.className = "mb-5";
 
 } catch(err) {
     console.error(`[ERROR]: Se generó un error en 'catsRandomFacts-Event': ${err.message}\n${err}`)
