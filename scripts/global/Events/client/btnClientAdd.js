@@ -1,4 +1,4 @@
-import { AddClient, GetClients } from '../../functions/client/functionsClient.js';
+import { AddClient, GetAllClients } from '../../functions/client/functionsClient.js';
 import { LocalStorageAdd } from '../../functions/localStorege.js';
 import { MessageWarning } from '../../functions/messges.js';
 import { Succes, Deny, Valid } from '../../functions/alerts.js';
@@ -25,28 +25,28 @@ btnClientAdd.addEventListener('click', async () => {
     }
 
     try {
-        const confirm = await Valid('<h2 class="font-bold">Confirmación</h2>', `<p class="font-text-1">¿Estás seguro de querer agregar un nuevo cliente?</p>
+        const confirm = await Valid('Confirmación', `<p class="font-text-1">¿Estás seguro de querer agregar un nuevo cliente?</p>
             <p><span class="font-bold important">Datos:</span><br>
                     <span class="font-bold">Nombre Completo:</span> ${name} ${lastName}<br>
                     <span class="font-bold">Número de telefono:</span> ${phoneNumer}<br>
                     <span class="font-bold">Correo electrónico:</span> ${mail}
                 </p>`);
         if(!confirm) {
-            Deny('Cancelación', 'Se cancelo la operación con éxito.');
+            await Deny('Cancelación', '<p class="font-text-1">Se cancelo la operación con éxito.</p>');
             ClearUpdateButtonClientUI();
             return;
         }
 
         AddClient(name, lastName, phoneNumer, mail);
 
-        const clients = GetClients();
+        const clients = GetAllClients();
         LocalStorageAdd('clients', clients);
         CreateClientsCards(clients);
 
-        await Succes('Éxito', 'Se agrego al cliente nuevo.');
+        await Succes('Éxito', '<p class="font-text-1">Se agrego al cliente nuevo.</p>');
     } catch(err) {
         console.error(`[ERROR]: Se generó un error en 'btnClientAdd-Event-Click': ${err.message}\n${err}`)
-        Deny('Error', `Ocurrió un error: ${err.message}`);
+        await Deny('Error', `<p class="font-text-1">Ocurrió un error: <span class="font-bold important">${err.message}</span></p>`);
     }
 
     ClearUpdateButtonClientUI();

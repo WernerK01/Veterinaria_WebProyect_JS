@@ -1,4 +1,4 @@
-import { UpdateClient, GetClients, GetSetSelectedClient } from "../../functions/client/functionsClient.js";
+import { UpdateClient, GetAllClients, GetSetSelectedClient, ClearSelection } from "../../functions/client/functionsClient.js";
 import { LocalStorageAdd } from "../../functions/localStorege.js";
 import { CreateClientsCards } from "../../functions/dom/Cards/createClientCard.js";
 import { ClearUpdateButtonClientUI } from "../../functions/dom/buttons.js";
@@ -24,7 +24,7 @@ btnClientUpdate.addEventListener('click', async () => {
     }
 
     try {
-        const confirm = await Valid('<h2 class="font-bold">Confirmación</h2>', `<p class="font-text-1">¿Estás seguro de querer modificar al cliente?</p>
+        const confirm = await Valid('Confirmación', `<p class="font-text-1">¿Estás seguro de querer modificar al cliente?</p>
             <p><span class="font-bold important">Datos Antiguos:</span><br>
                 <span class="font-bold">Nombre Completo:</span> ${oldClient.name} ${oldClient.lastName}<br>
                 <span class="font-bold">Número de telefono:</span> ${oldClient.phoneNumer}<br>
@@ -35,22 +35,23 @@ btnClientUpdate.addEventListener('click', async () => {
                 <span class="font-bold">Número de telefono:</span> ${phoneNumer}<br>
                 <span class="font-bold">Correo electrónico:</span> ${mail}</p>`);
         if(!confirm) {
-            await Deny('Cancelación', 'Se cancelo la operación con éxito.');
+            await Deny('Cancelación', '<p class="font-text-1">Se cancelo la operación con éxito.</p>');
             ClearUpdateButtonClientUI();
             return;
         }
                 
         UpdateClient(name, lastName, phoneNumer, mail);
 
-        const clients = GetClients();
+        const clients = GetAllClients();
         LocalStorageAdd('clients', clients);
         CreateClientsCards(clients);
+        ClearSelection();
 
         await Succes('Éxito', 'Se modifico al usuario correctamente.');
 
     } catch(err) {
         console.error(`[ERROR]: Se generó un error en 'btnClientUpdate-Event-Click': ${err.message}\n${err}`)
-        await Deny('Error', `Ocurrió un error: ${err.message}`);
+        await Deny('Error', `<p class="font-text-1">Ocurrió un error: <span class="font-bold important">${err.message}</span></p>`);
     }
 
     ClearUpdateButtonClientUI();

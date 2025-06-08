@@ -8,3 +8,6 @@ import './global/Events/client/btnClientRemove.js';
 import './global/Events/client/btnClientSelection.js';
 
 import './global/Events/others/randomFacts.js';
+
+import './global/Events/pets/btnPetAdd.js';
+import './global/Events/pets/AddAllPetsCard.js';

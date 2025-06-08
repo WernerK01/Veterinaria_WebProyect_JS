@@ -1,8 +1,8 @@
-import { GetClients } from "../../functions/client/functionsClient.js";
+import { GetAllClients } from "../../functions/client/functionsClient.js";
 import { CreateClientsCards } from "../../functions/dom/Cards/createClientCard.js";
 import { MessageError } from "../../functions/messges.js";
 
-const clients = GetClients();
+const clients = GetAllClients();
 
 try {
     CreateClientsCards(clients);

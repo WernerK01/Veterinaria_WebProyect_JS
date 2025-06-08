@@ -22,6 +22,13 @@ export function UpdateClientInputs(selection) {
     inputClientMail.value = selection.mail;
 }
 
+export function UpdatePetInputs(selection) {
+    inputPetName.value = selection.name;
+    inputPetAge.value = selection.age;
+    inputPetRace.value = selection.race;
+    textAreaPetDetails.value = selection.description;
+}
+
 export function ClearUIPets() {
     inputPetName.value = ""
     inputPetAge.value = ""

@@ -4,11 +4,11 @@ export function CreateClientsCards(clients) {
     clientContainer.innerHTML = "";
 
     clients.forEach((client) => {
-        const clientCard = document.createElement("div");
-        clientCard.className = "card m-3";
-        clientCard.style.width = "18rem";
+        const card = document.createElement("div");
+        card.className = "card m-3";
+        card.style.width = "18rem";
 
-        clientCard.innerHTML = `
+        card.innerHTML = `
             <div class="card-body">
                 <h5 class="card-title font-bold">${client.name} ${client.lastName}</h5>
                 <p class="card-text">
@@ -25,6 +25,6 @@ export function CreateClientsCards(clients) {
             </div>
         `;
 
-        clientContainer.appendChild(clientCard);
+        clientContainer.appendChild(card);
     });
 }
