@@ -18,9 +18,9 @@ export function CreatePetsCard(pets) {
                 </p>
             </div>
             <div class="card-body">
-                <button class="btn btn-outline-info" id="btnPetSelect" data-client-id="${pet.id}" type="submit">
+                <button class="btn btn-outline-info" id="btnPetSelect" data-pet-id="${pet.id}" type="submit">
                     <i class="bi bi-hand-index-thumb-fill"></i> Seleccionar</button>
-                <button class="btn btn-outline-danger" id="btnPetRemove" data-client-id="${pet.id}" type="submit">
+                <button class="btn btn-outline-danger" id="btnPetRemove" data-pet-id="${pet.id}" type="submit">
                     <i class="bi bi-trash3-fill"></i> Eliminar</button>
             </div>
         `;

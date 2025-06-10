@@ -8,8 +8,8 @@ export function GetAllPets() {
 }
 
 export function GetPet(petID) {
-    let pets = pets.find(x => x.id === petID);
-    return petID;
+    let petFound = pets.find(x => x.id == petID);
+    return petFound;
 }
 
 export function AddPet(name, age, race, description, clientID) {

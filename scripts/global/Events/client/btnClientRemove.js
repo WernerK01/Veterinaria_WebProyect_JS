@@ -4,7 +4,6 @@ import { Succes, Deny, Valid } from '../../functions/alerts.js';
 import { ClearUpdateButtonClientUI } from '../../functions/dom/buttons.js';
 import { CreateClientsCards } from "../../functions/dom/Cards/createClientCard.js";
 import { GetAllPets, RemovePetOfClients } from '../../functions/pets/functionsPets.js';
-import { CreatePetsCard } from '../../functions/dom/Cards/createPetsCard.js';
 
 const btnClientRemove = document.querySelectorAll('#btnClientRemove');
 

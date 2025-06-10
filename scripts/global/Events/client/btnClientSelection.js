@@ -9,7 +9,10 @@ AllBtnClientSelect.forEach((button) => {
         const dataClientID = parseInt(button.getAttribute('data-client-id'));
         const clientFound = GetClient(dataClientID);
 
-        if (clientFound == undefined) throw new Error('El cliente no se pudo encontrar.');
+        if (clientFound == undefined) { 
+            MessageError('El cliente no se pudo encontrar.');
+            return;
+        }
 
         try {
             GetSetSelectedClient(clientFound);
