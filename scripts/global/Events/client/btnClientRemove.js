@@ -2,7 +2,7 @@ import { RemoveClient, GetAllClients, GetClient } from '../../functions/client/f
 import { UpdateLocalStorage } from '../../functions/localStorege.js';
 import { Succes, Deny, Valid } from '../../functions/alerts.js';
 import { ClearUpdateButtonClientUI } from '../../functions/dom/buttons.js';
-import { CreateClientsCards } from "../../functions/dom/Cards/createClientCard.js";
+import { CreateClientsCards } from "../../functions/dom/cards/createClientCard.js";
 import { GetAllPets, RemovePetOfClients } from '../../functions/pets/functionsPets.js';
 
 const btnClientRemove = document.querySelectorAll('#btnClientRemove');

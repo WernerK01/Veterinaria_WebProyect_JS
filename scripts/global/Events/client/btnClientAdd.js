@@ -4,7 +4,7 @@ import { MessageWarning } from '../../functions/messges.js';
 import { Succes, Deny, Valid } from '../../functions/alerts.js';
 import { ClearUpdateButtonClientUI } from '../../functions/dom/buttons.js';
 import { IntValidation } from '../../functions/validations.js';
-import { CreateClientsCards } from '../../functions/dom/Cards/createClientCard.js';
+import { CreateClientsCards } from '../../functions/dom/cards/createClientCard.js';
 
 const btnClientAdd = document.querySelector('#btnClientAdd');
 

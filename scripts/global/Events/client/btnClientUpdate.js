@@ -1,6 +1,6 @@
 import { UpdateClient, GetAllClients, GetSetSelectedClient, ClearSelection } from "../../functions/client/functionsClient.js";
 import { LocalStorageAdd } from "../../functions/localStorege.js";
-import { CreateClientsCards } from "../../functions/dom/Cards/createClientCard.js";
+import { CreateClientsCards } from "../../functions/dom/cards/createClientCard.js";
 import { ClearUpdateButtonClientUI } from "../../functions/dom/buttons.js";
 import { Valid, Deny, Succes } from "../../functions/alerts.js";
 import { IntValidation } from "../../functions/validations.js";
