@@ -5,7 +5,7 @@ import { GetSetSelectedClient } from "../../functions/client/functionsClient.js"
 import { LocalStorageAdd } from "../../functions/localStorege.js";
 import { IntValidation } from "../../functions/validations.js";
 import { ClearUpdateButtonsPetsUI } from "../../functions/dom/buttons.js";
-import { CreatePetsCard } from "../../functions/dom/Cards/createPetsCard.js";
+import { CreatePetsCard } from "../../functions/dom/cards/createPetsCard.js";
 
 const btnPetAdd = document.querySelector('#btnPetAdd');
 

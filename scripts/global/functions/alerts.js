@@ -5,11 +5,11 @@ const swalBoostrapSucces = Swal.mixin({
         closeButton: 'btn btn-outline-danger m-1'
     },
     showClass: {
-    popup: ` animate__animated animate__fadeInUp animate__faster `
-  },
-  hideClass: {
-    popup: ` animate__animated animate__fadeOutDown animate__faster`
-  },
+        popup: ` animate__animated animate__fadeInUp animate__faster `
+    },
+    hideClass: {
+        popup: ` animate__animated animate__fadeOutDown animate__faster`
+    },
     buttonsStyling: false,
     theme: 'dark',
     background: '#0F0F1A',
@@ -42,7 +42,7 @@ export async function Valid(title, args) {
     await swalBoostrapSucces.fire({
         title: `<h2 class="font-bold">${title}</h2>`,
         html: args,
-        icon: 'warning',
+        icon: 'question',
         iconColor: '#FC2',
         confirmButtonText: 'Confirmar',
         showConfirmButton: true,

@@ -1,3 +1,6 @@
+import { GetAllPets } from "./pets/functionsPets.js";
+import { GetAllClients } from "./client/functionsClient.js";
+
 export function LocalStorageAdd(name, content) {
     if(typeof(name) != 'string') throw new Error(`El nombre ${name} es inválido.`);
 
@@ -15,4 +18,9 @@ export function GetLocalStorege(name) {
     if(typeof(name) != 'string') throw new Error(`El nombre ${name} es inválido.`);
 
     return JSON.parse(localStorage.getItem(name)) || [];
+}
+
+export function UpdateLocalStorage(clients, pets) {
+    LocalStorageAdd('clients', clients);
+    LocalStorageAdd('pets', pets);
 }

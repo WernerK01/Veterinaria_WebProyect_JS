@@ -1,6 +1,6 @@
 import { GetAllPets } from "../../functions/pets/functionsPets.js";
 import { MessageError } from "../../functions/messges.js";
-import { CreatePetsCard } from "../../functions/dom/Cards/createPetsCard.js";
+import { CreatePetsCard } from "../../functions/dom/cards/createPetsCard.js";
 
 const pets = GetAllPets();
 

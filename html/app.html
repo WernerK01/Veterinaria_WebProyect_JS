@@ -26,7 +26,7 @@
     <!-- Titles & Normal text -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Quicksand:wght@300..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 </head>
 <body class="body">
@@ -62,7 +62,7 @@
         </nav>
     </header>
 
-    <main class="text-center">
+    <main class="text-center weeb">
         <div class="spinner-border visually-hidden" id="loading" style="color: #50D;" role="status"></div>
 
         <section id="completeContent">
@@ -70,16 +70,18 @@
 
             <div class="mb-5">
                 <button class="btn btn-outline-warning me-2 mb-2" id="btnGlobalClearClient" type="submit"><i class="bi bi-trash-fill"></i> Límpiar LocalStorage de Cliente</button>
-                <button class="btn btn-outline-warning" id="btnGlobalClearPet" type="submit"><i class="bi bi-trash-fill"></i> Límpiar LocalStorage de las Mascotas</button>
+                <button class="btn btn-outline-warning mb-2" id="btnGlobalClearPet" type="submit"><i class="bi bi-trash-fill"></i> Límpiar LocalStorage de las Mascotas</button>
             </div>
 
             <div id="loader" class="spinner-border spinner mb-2"></div>
             <div id="facts" class="visually-hidden">
-                <h3 class="font-bold supershadow-text colorWhite">Un hecho de los Perros</h3>
-                <section id="dogsRandomFacts" class="container-fluid mb-1 colorWhite"></section>
+                <div class="supershadow-tools">
+                    <h3 class="font-bold supershadow-span">Un hecho de los Perros</h3>
+                    <section id="dogsRandomFacts" class="colorWhite"></section>
 
-                <h3 class="font-bold supershadow-text colorWhite">Un hecho de lo Gatos</h3>
-                <section id="catsRandomFacts" class="container-fluid mb-3 colorWhite"></section>
+                    <h3 class="font-bold supershadow-span">Un hecho de lo Gatos</h3>
+                    <section id="catsRandomFacts" class="colorWhite"></section>
+                </div>
             </div>
             
             <h3 class="h3 font-2r supershadow-title">Clientes</h3>
@@ -127,7 +129,6 @@
             <section id="clientContainer" class="d-flex flex-wrap justify-content-center align-items-center"></section>
 
             <h3 class="h3 font-2r mt-5 supershadow-title">Mascotas</h3>
-
             <section class="container-fluid d-flex justify-content-center align-items-center">
                 <div class="row">
                     <div class="col-lg-4 col-sm-12 mb-3">

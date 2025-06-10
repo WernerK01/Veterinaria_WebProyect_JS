@@ -146,6 +146,25 @@
     box-shadow: 0 0 0 .25rem rgba(171, 102, 255, 0.11);
 }
 
+.weeb:before {
+  background-image: url("../img/bg-grey.jpg");
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: fixed;
+  top: 0;
+  background-color: #0F0F1A;
+  background-blend-mode: overlay;
+  background-size: cover;
+  z-index: -2;
+}
+.weeb {
+  margin-top: -60px;
+  padding-top: 60px;
+  background-blend-mode: color-dodge;
+}
+
 .body {
     background-color: #0F0F1A;
 }
@@ -193,7 +212,7 @@
 }
 
 .font-2r {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .font-3r {
@@ -213,12 +232,50 @@
 .colorWhite {
     color: white;
 }
+.colorRose {
+    color: #50D !important;
+}
 
 .text {
     color: white;
     font-size: 1.2rem;
     margin: 0;
     padding: 0;
+}
+
+.supershadow-tools, .supershadow-tools *{
+    --line-col: #223
+  --text-shadow: var(--line-col,#112);
+  --outline-1: 1px 1px 1px var(--line-col), -1px -1px 1px var(--line-col),
+    -1px 1px 1px var(--line-col), 1px 0px 1px var(--line-col),
+    -1px 0px 1px var(--line-col), 0px 1px 1px var(--line-col),
+    0px -1px 1px var(--line-col);
+  --outline-2: 2px 2px 0px var(--line-col), 2px -2px 1px var(--line-col),
+    -2px -2px 1px var(--line-col), -2px 2px 1px var(--line-col),
+    2px 0px 1px var(--line-col), 2px 0px 0px var(--line-col),
+    -2px 0px 0px var(--line-col), 0px 2px 0px var(--line-col),
+    0px -2px 0px var(--line-col), -2px 0px 0px var(--line-col),
+    0px 2px 0px var(--line-col), 0px -2px 1px var(--line-col);
+  --extrusion: -2px 3px 1px var(--line-col), -1px 4px 1px var(--line-col),
+    3px 2px 1px var(--line-col), 4px 1px 1px var(--line-col),
+    0px 5px 1px var(--line-col), 1px 6px 1px var(--line-col),
+    3px 6px 1px var(--line-col);
+  --extrusion-1: 1px 1px 1px var(--line-col), 2px 2px 1px var(--line-col),
+    3px 3px 1px var(--line-col);
+  --thin-drop: drop-shadow(2px 1px 0px var(--line-col));
+}
+.supershadow-span {
+    text-transform: uppercase;
+    --line-col: #223;
+    text-shadow: var(--outline-1), var(--outline-2), var(--extrusion);
+    font-family: "Lexend", sans-serif;
+    color: white;
+    font-weight: 800;
+    filter: drop-shadow(2px 1px 0px #223);
+    line-height: 0.8;
+    font-style: italic;
+    max-width: 100%;
+    display: inline-block;
 }
 
 .supershadow-title {

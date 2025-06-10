@@ -1,8 +1,10 @@
 import { RemoveClient, GetAllClients, GetClient } from '../../functions/client/functionsClient.js';
-import { LocalStorageAdd } from '../../functions/localStorege.js';
+import { UpdateLocalStorage } from '../../functions/localStorege.js';
 import { Succes, Deny, Valid } from '../../functions/alerts.js';
 import { ClearUpdateButtonClientUI } from '../../functions/dom/buttons.js';
 import { CreateClientsCards } from "../../functions/dom/Cards/createClientCard.js";
+import { GetAllPets, RemovePetOfClients } from '../../functions/pets/functionsPets.js';
+import { CreatePetsCard } from '../../functions/dom/Cards/createPetsCard.js';
 
 const btnClientRemove = document.querySelectorAll('#btnClientRemove');
 
@@ -26,11 +28,15 @@ btnClientRemove.forEach((button) => {
                 return;
             }
 
+            RemovePetOfClients(clientFound);
             RemoveClient(clientFound);
 
             const clients = GetAllClients();
-            LocalStorageAdd('clients', clients);
+            const pets = GetAllPets();
+
+            UpdateLocalStorage(clients, pets);
             CreateClientsCards(clients);
+            CreatePetsCard(pets);
 
             await Succes('Éxito', '<p class="font-text-1">El usuario fue eliminado con éxito.</p>');
 

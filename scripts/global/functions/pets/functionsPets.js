@@ -32,6 +32,14 @@ export function RemovePet(pet) {
     pets.splice(pets.indexOf(pet), 1);
 }
 
+export function RemovePetOfClients(client) {
+    pets.forEach((pet) => {
+        if(pet.clientID == client.id) {
+            RemovePet(pet);
+        }
+    });
+}
+
 export function UpdatePet(name, age, race, description) {
     let oldPet = GetPet(selectedPet.id)
 

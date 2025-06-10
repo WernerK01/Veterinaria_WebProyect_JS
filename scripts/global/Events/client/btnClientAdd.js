@@ -25,7 +25,7 @@ btnClientAdd.addEventListener('click', async () => {
     }
 
     try {
-        const confirm = await Valid('Confirmación', `<p class="font-text-1">¿Estás seguro de querer agregar un nuevo cliente?</p>
+        const confirm = await Valid('Confirmación', `<p class="font-text-1">Por favor, confirma que los datos ingresados estén bien.</p>
             <p><span class="font-bold important">Datos:</span><br>
                     <span class="font-bold">Nombre Completo:</span> ${name} ${lastName}<br>
                     <span class="font-bold">Número de telefono:</span> ${phoneNumer}<br>
@@ -41,9 +41,9 @@ btnClientAdd.addEventListener('click', async () => {
 
         const clients = GetAllClients();
         LocalStorageAdd('clients', clients);
-        CreateClientsCards(clients);
+        CreateClientsCards(clients);    
 
-        await Succes('Éxito', '<p class="font-text-1">Se agrego al cliente nuevo.</p>');
+        await Succes('Éxito', '<p class="font-text-1">Se agrego al cliente con éxito.</p>');
     } catch(err) {
         console.error(`[ERROR]: Se generó un error en 'btnClientAdd-Event-Click': ${err.message}\n${err}`)
         await Deny('Error', `<p class="font-text-1">Ocurrió un error: <span class="font-bold important">${err.message}</span></p>`);
